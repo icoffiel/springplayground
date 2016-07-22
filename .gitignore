@@ -14,5 +14,3 @@ hs_err_pid*
 # User-specific stuff:
 .idea
 *.iml
-src/main/resources/static/
-src/main/resources/templates/
