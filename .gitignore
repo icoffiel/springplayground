@@ -13,3 +13,6 @@ hs_err_pid*
 ### JetBrains template
 # User-specific stuff:
 .idea
+*.iml
+src/main/resources/static/
+src/main/resources/templates/
