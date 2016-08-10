@@ -4,3 +4,13 @@ spring:
   jpa:
     hibernate:
       ddl-auto: validate
+app:
+  security:
+    authentication:
+      jwt:
+        secret: changeit
+        header: Authorization
+        bearerHeader: Bearer
+        expiration: 1200
+        refresh-expiration: 7200
+        refresh-header: Refresh

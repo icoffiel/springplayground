@@ -1,7 +1,7 @@
 create table IF NOT EXISTS users(
   id bigint auto_increment not null primary key,
 	username varchar_ignorecase(50) not null,
-	password varchar_ignorecase(50) not null,
+	password varchar(60) not null,
 	enabled boolean not null
 );
 
@@ -23,9 +23,9 @@ INSERT INTO authority (id, authority) values (1, 'ROLE_ADMIN');
 INSERT INTO authority (id, authority) values (2, 'ROLE_USER');
 
 -- Default Admin
-INSERT INTO users (username, password, enabled) values ('admin', 'password', true);
+INSERT INTO users (username, password, enabled) values ('admin', '$2a$08$G7xCv3IS2dwEKOKvX2wspOZhVtqNYNhU6XjgTpjJM3jwj8Hwy/F4a', true);
 INSERT INTO user_authority (user_id, authority_id) values(1, 1);
 
 -- Default User
-INSERT INTO users (username, password, enabled) values ('user', 'password', true);
+INSERT INTO users (username, password, enabled) values ('user', '$2a$08$G7xCv3IS2dwEKOKvX2wspOZhVtqNYNhU6XjgTpjJM3jwj8Hwy/F4a', true);
 INSERT INTO user_authority (user_id, authority_id) values (2, 2);
