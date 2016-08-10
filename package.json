@@ -1,0 +1,30 @@
+{
+  "name": "springplayground",
+  "version": "1.0.0",
+  "description": "Playing around with Spring",
+  "main": "index.js",
+  "dependencies": {
+    "cz-conventional-changelog": "^1.1.7"
+  },
+  "devDependencies": {
+    "cz-conventional-changelog": "^1.1.7"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/icoffiel/springplayground.git"
+  },
+  "author": "Iain",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/icoffiel/springplayground/issues"
+  },
+  "homepage": "https://github.com/icoffiel/springplayground#readme",
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
