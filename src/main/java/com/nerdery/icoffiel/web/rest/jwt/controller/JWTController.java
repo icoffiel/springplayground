@@ -6,7 +6,6 @@ import com.nerdery.icoffiel.web.rest.jwt.model.JwtDto;
 import com.nerdery.icoffiel.web.rest.jwt.model.LoginDto;
 import com.nerdery.icoffiel.web.rest.jwttoken.model.JwtToken;
 import com.nerdery.icoffiel.web.rest.jwttoken.service.JwtTokenService;
-import com.nerdery.icoffiel.web.rest.user.model.User;
 import com.nerdery.icoffiel.web.rest.user.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
@@ -34,19 +33,15 @@ public class JWTController {
 
     private final JwtTokenUtil tokenUtil;
     private final AuthenticationManager authenticationManager;
-    private final JwtTokenService jwtTokenService;
-    private final UserService userService;
     private final String header;
     private final String refreshHeader;
     private final String bearerHeader;
 
     @Autowired
     public JWTController(JwtTokenUtil tokenUtil, AuthenticationManager authenticationManager,
-                         AppProperties appProperties, JwtTokenService jwtTokenService, UserService userService) {
+                         AppProperties appProperties) {
         this.tokenUtil = tokenUtil;
         this.authenticationManager = authenticationManager;
-        this.jwtTokenService = jwtTokenService;
-        this.userService = userService;
 
         this.header = appProperties.getSecurity().getAuthentication().getJwt().getHeader();
         this.refreshHeader = appProperties.getSecurity().getAuthentication().getJwt().getRefreshHeader();

@@ -1,0 +1,15 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Multiple HTTP Demo</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    </head>
+    <body>
+        <!--/*@thymesVar id="users" type="java.util.List"*/-->
+        <!--/*@thymesVar id="user" type="com.nerdery.icoffiel.web.rest.user.model.User"*/-->
+        <div th:each="user : ${users}">
+            Username: <span th:text="${user.username}" th:remove="tag">username</span>
+            Enabled: <span th:text="${user.enabled}" th:remove="tag">true</span>
+        </div>
+    </body>
+</html>
